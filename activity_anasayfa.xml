@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Anasayfa">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="288dp"
+            android:layout_height="62dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/barkod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="82dp"
+            android:ems="10"
+            android:hint="Barkod Numarası"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/kitap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:ems="10"
+            android:hint="Kitap İsmi"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/kaydet"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/barkod"
+            android:layout_centerVertical="true"
+            android:text="KAYDET" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/kitapListesi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/imageView"
+                    android:layout_marginBottom="21dp"
+                    android:layout_marginStart="-18dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
